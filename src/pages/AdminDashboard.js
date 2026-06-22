@@ -5,7 +5,7 @@ function AdminDashboard() {
   const [parcels, setParcels] = useState([]);
   const [users, setUsers] = useState([]);
   const [agents, setAgents] = useState([]);
-  const [adminRole, setAdminRole] = useState('');
+ 
   const [activeTab, setActiveTab] = useState('parcels');
 
   const [supportTickets, setSupportTickets] = useState([]);
@@ -45,7 +45,7 @@ function AdminDashboard() {
     const token = localStorage.getItem('adminToken');
     const role = localStorage.getItem('adminRole');
     if (!token) { navigate('/'); return; }
-    setAdminRole(role);
+    
     
     fetchParcels();
     fetchUsers();
